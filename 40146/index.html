@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8'>
+	<title>CSS Triangle Breadcrumbs</title>
+	<link rel='stylesheet' href='css/style.css'>
+	
+	<style>
+	
+		.breadcrumb { 
+			list-style: none; 
+			overflow: hidden; 
+			font: 18px Helvetica, Arial, Sans-Serif;
+		}
+		.breadcrumb li a {
+			color: white;
+			text-decoration: none; 
+			padding: 10px 0 10px 55px;
+			background: #454545; 
+			position: relative; 
+			display: block;
+			float: left;
+		}
+		.breadcrumb li a:after { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid #454545;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			left: 100%;
+			z-index: 2; 
+		}	
+		.breadcrumb li a:before { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid white;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			margin-left: 1px;
+			left: 100%;
+			z-index: 1; 
+		}	
+
+		
+	</style>
+	
+</head>
+
+<body>
+  
+	<div id="page-wrap">
+	
+		<h1>CSS Triangle Breadcrumbs</h1>
+
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Vehicles</a></li>
+			<li><a href="#">Vans</a></li>
+			<li><a href="#">Camper Vans</a></li>
+			<li><a href="#">1989 VW Westfalia Vanagon</a></li>
+		</ul>
+	
+	</div>
+	
+
+</body>
+
+</html>
