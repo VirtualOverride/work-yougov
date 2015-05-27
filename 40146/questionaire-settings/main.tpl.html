@@ -1,0 +1,65 @@
+<div class="col-md-1">
+    <div class="btn-group" dropdown data-step="5" data-intro='Some small convenient tools here. Try them!'>
+        <button type="button" 
+                ng-click="updateExcelHref()" 
+                class="btn btn-default dropdown-toggle" 
+                dropdown-toggle ng-disabled="disabled">
+            <i class="fa fa-bars fa-w"></i>
+        </button>
+        <ul id="main-surveyTools" class="dropdown-menu" role="menu">
+            <li>
+                <a ng-click="openSurveySetting()">
+                    <i class="fa fa-gears fa-lg fa-fw"></i> 
+                    Questionnaire Settings</a>
+            </li>
+            <li>
+                <a ng-click="openVersionControl()">
+                    <i class="fa fa-code-fork fa-lg fa-fw"></i> 
+                    Version Control
+                </a>
+            </li>
+            <li>
+                <a ng-click="openFindAndReplace()">
+                    <i class="fa fa-refresh fa-lg fa-fw"></i> 
+                    Find Replace
+                </a>
+            </li>
+            <li>
+                <a ng-click="generateScript()">
+                    <i class="fa fa-file-text fa-lg fa-fw"></i> 
+                    Preview Generated G4 Script
+                </a>
+            </li>
+            <li>
+                <a ng-click="openCSVTool()">
+                    <i class="fa fa-table fa-lg fa-fw"></i> 
+                    Create From CSV
+                </a>
+            </li>
+            <li>
+                <a href="{{excelHref}}" download="{{excelFileName}}">
+                    <i class="fa fa-file-excel-o fa-fw"></i> 
+                    Save As Excel
+                </a>
+            </li>
+            <li>
+                <a ng-show="isAppMode" ci-save-local>
+                    <i class="fa fa-download fa-lg fa-fw"></i> 
+                    Download To Hard Drive
+                </a>
+            </li>
+            <li>
+                <a ng-show="isAppMode" ci-read-local>
+                    <i class="fa fa-upload fa-lg fa-fw"></i> 
+                    Upload From Hard Drive
+                </a>
+            </li>
+            <li>
+                <a ng-click="toggleTopNavigationBar()">
+                    <i class="fa fa-eye fa-lg fa-fw"></i> 
+                    Toggle Top Navigation Bar
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
